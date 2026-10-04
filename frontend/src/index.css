@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+#Home {
+  background-image: url("./assets/HomeBg.png");
+  background-size: cover;       /* Makes image cover the whole area */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Keeps image still when scrolling */
+  min-height: 100vh;            /* Takes up full viewport height */
+  width: 100%;                  /* Takes up full width */
+}
