@@ -10,6 +10,8 @@ const app = express()
 const PORT = process.env.PORT
 const MONGO_URI = process.env.MONGO_URI
 
+console.log("PORT:", PORT)
+
 if (!MONGO_URI) {
     console.error("MONGO_URI is not set. Add it to backend/.env.")
     process.exit(1)
