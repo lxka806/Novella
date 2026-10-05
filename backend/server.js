@@ -8,7 +8,12 @@ const cors = require("cors")
 const app = express()
 
 const PORT = process.env.PORT
-const MONGODB_URL = process.env.MONGODB_URL
+const MONGO_URI = process.env.MONGO_URI
+
+if (!MONGO_URI) {
+    console.error("MONGO_URI is not set. Add it to backend/.env.")
+    process.exit(1)
+}
 
 const authRouter = require("./routers/auth.route")
 const bookRouter = require("./routes/book.routes")
@@ -32,10 +37,14 @@ app.use("/api/admin", adminRouter)
 app.use("/api/recommendations", recommendationsRouter)
 app.use("/api/feedback", feedbackRouter)
 
-mongoose.connect(MONGODB_URL)
+mongoose.connect(MONGO_URI)
     .then(() => {
         console.log("MONGODB is connected")
         app.listen(PORT, () => {
             console.log("server is running on port:", PORT)
         })
+    })
+    .catch((error) => {
+        console.error("Failed to connect to MongoDB:", error.message)
+        process.exit(1)
     })
