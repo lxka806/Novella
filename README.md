@@ -93,49 +93,6 @@ Novella follows a full-stack client-server architecture.
 - MongoDB for persistent data storage.
 - Mongoose for schema definitions and database operations.
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js
-- npm
-- MongoDB database
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/lxka806/Novella.git
-cd Novella
-```
-
-### 2. Install dependencies
-
-Install dependencies in the frontend and backend directories according to the project structure.
-
-```bash
-npm install
-```
-
-### 3. Environment Variables
-
-Configure the required environment variables for the backend, including your MongoDB connection string and authentication configuration.
-
-Example:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-```
-
-### 4. Run the Application
-
-Start the backend and frontend using their respective development scripts.
-
-```bash
-npm run dev
-```
-
 ## 🎨 Project Goals
 
 Novella was created to provide a convenient and enjoyable experience for book lovers.
